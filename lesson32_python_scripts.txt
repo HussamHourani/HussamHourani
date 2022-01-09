@@ -1,0 +1,36 @@
+out_data = in_data
+out_learner = in_learner
+out_classifier = in_classifier
+out_object = in_object
+
+
+
+print(in_data)
+out_data = in_data.copy()
+
+
+
+print(in_data)
+print("Attributes : ")
+print(in_data.domain)
+print("Number of rows : ")
+print(len(in_data))
+out_data = in_data.copy()
+
+
+
+out_data = in_data.copy()
+import math
+temp = math.ceil(out_data.X[0][0])
+print(temp)
+print(out_data.X[0])
+
+
+
+out_data = in_data.copy()
+import numpy as np
+my_data = in_data.copy()
+#copy, otherwise input data will be overwritten
+np.round(my_data.X, 0, my_data.X)
+print(my_data.X)
+out_data = my_data.copy()
