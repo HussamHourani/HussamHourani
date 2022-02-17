@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="CSV File Import" position="(93.0, 348.0)" />
+		<node id="1" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table" position="(237.16666666666663, 241.0)" />
+		<node id="2" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns" position="(234.0, 471.0)" />
+		<node id="3" name="Linear Regression" qualified_name="Orange.widgets.model.owlinearregression.OWLinearRegression" project_name="Orange3" version="" title="Linear Regression" position="(444.6666666666665, 323.5)" />
+		<node id="4" name="Test and Score" qualified_name="Orange.widgets.evaluate.owtestandscore.OWTestAndScore" project_name="Orange3" version="" title="Test and Score" position="(630.9999999999998, 467.83333333333337)" />
+		<node id="5" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="CSV File Import (1)" position="(636.0, 568.6666666666665)" />
+		<node id="6" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table (2)" position="(845.3333333333333, 577.3333333333333)" />
+		<node id="7" name="Predictions" qualified_name="Orange.widgets.evaluate.owpredictions.OWPredictions" project_name="Orange3" version="" title="Predictions" position="(877.5, 370.33333333333337)" />
+		<node id="8" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table (1)" position="(354.0, 552.0)" />
+		<node id="9" name="SVM" qualified_name="Orange.widgets.model.owsvm.OWSVM" project_name="Orange3" version="" title="SVM" position="(451.0, 410.0)" />
+		<node id="10" name="Tree" qualified_name="Orange.widgets.model.owtree.OWTreeLearner" project_name="Orange3" version="" title="Tree" position="(437.0, 235.0)" />
+		<node id="11" name="kNN" qualified_name="Orange.widgets.model.owknn.OWKNNLearner" project_name="Orange3" version="" title="kNN" position="(434.0, 160.0)" />
+		<node id="12" name="Random Forest" qualified_name="Orange.widgets.model.owrandomforest.OWRandomForest" project_name="Orange3" version="" title="Random Forest" position="(431.0, 89.0)" />
+		<node id="13" name="Gradient Boosting" qualified_name="Orange.widgets.model.owgradientboosting.OWGradientBoosting" project_name="Orange3" version="" title="Gradient Boosting" position="(447.0, 13.0)" />
+		<node id="14" name="AdaBoost" qualified_name="Orange.widgets.model.owadaboost.OWAdaBoost" project_name="Orange3" version="" title="AdaBoost" position="(448.0, -54.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="1" source_node_id="0" sink_node_id="2" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="2" source_node_id="3" sink_node_id="4" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="3" source_node_id="5" sink_node_id="6" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="4" source_node_id="2" sink_node_id="4" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="5" source_node_id="2" sink_node_id="8" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="6" source_node_id="3" sink_node_id="7" source_channel="Model" sink_channel="Predictors" enabled="true" />
+		<link id="7" source_node_id="2" sink_node_id="3" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="8" source_node_id="5" sink_node_id="7" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="9" source_node_id="2" sink_node_id="9" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="10" source_node_id="9" sink_node_id="4" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="11" source_node_id="9" sink_node_id="7" source_channel="Model" sink_channel="Predictors" enabled="true" />
+		<link id="12" source_node_id="2" sink_node_id="10" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="13" source_node_id="10" sink_node_id="4" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="14" source_node_id="10" sink_node_id="7" source_channel="Model" sink_channel="Predictors" enabled="true" />
+		<link id="15" source_node_id="2" sink_node_id="11" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="16" source_node_id="11" sink_node_id="4" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="17" source_node_id="11" sink_node_id="7" source_channel="Model" sink_channel="Predictors" enabled="true" />
+		<link id="18" source_node_id="2" sink_node_id="12" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="19" source_node_id="12" sink_node_id="4" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="20" source_node_id="12" sink_node_id="7" source_channel="Model" sink_channel="Predictors" enabled="true" />
+		<link id="21" source_node_id="2" sink_node_id="13" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="22" source_node_id="13" sink_node_id="7" source_channel="Model" sink_channel="Predictors" enabled="true" />
+		<link id="23" source_node_id="2" sink_node_id="14" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="24" source_node_id="14" sink_node_id="7" source_channel="Model" sink_channel="Predictors" enabled="true" />
+		<link id="25" source_node_id="13" sink_node_id="4" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="26" source_node_id="14" sink_node_id="4" source_channel="Learner" sink_channel="Learner" enabled="true" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'AbsPath', 'path': 'C:/Users/hussam.hourani/Documents/OrangeDatamining/Lessons/cars.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 5, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': 'C:/Users/hussam.hourani/Documents/OrangeDatamining/Lessons', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02 \x00\x00\x00\xd2\x00\x00\x035\x00\x00\x02\x06\x00\x00\x02 \x00\x00\x00\xd2\x00\x00\x035\x00\x00\x02\x06\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x02 \x00\x00\x00\xd2\x00\x00\x035\x00\x00\x02\x06', '__version__': 3}</properties>
+		<properties node_id="1" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x1a\x00\x00\x00S\x00\x00\x05.\x00\x00\x02f\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x05-\x00\x00\x02e\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x05-\x00\x00\x02e', 'select_rows': True, 'selected_cols': [0, 1, 2, 3, 4], 'selected_rows': [0], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
+		<properties node_id="2" format="pickle">gASV8wEAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNpZ25v
+cmVfbmV3X2ZlYXR1cmVzlImME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAX8AAABA
+AAAD1gAAApcAAAF/AAAAQAAAA9YAAAKXAAAAAAAAAAAFVgAAAX8AAABAAAAD1gAAApeUjBJ1c2Vf
+aW5wdXRfZmVhdHVyZXOUiYwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZSMFW9y
+YW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMEWRvbWFp
+bl9yb2xlX2hpbnRzlH2UKIwDQ2FylEsDhpSMCWF2YWlsYWJsZZRLAIaUjAVNb2RlbJRLA4aUaBVL
+AYaUjAZWb2x1bWWUSwKGlIwJYXR0cmlidXRllEsAhpSMBldlaWdodJRLAoaUaBxLAYaUjANDTzKU
+SwKGlIwFY2xhc3OUSwCGlHVK/v///4aUaAdLAXWMCmF0dHJpYnV0ZXOUfZQojAZWb2x1bWWUSwKM
+BldlaWdodJRLAowDQ08ylEsCdYwFbWV0YXOUfZQojANDYXKUSwOMBU1vZGVslEsDdXViYXUu
+</properties>
+		<properties node_id="3" format="literal">{'alpha_index': 0, 'auto_apply': True, 'autosend': True, 'controlAreaVisible': True, 'fit_intercept': True, 'l2_ratio': 0.5, 'learner_name': '', 'reg_type': 0, 'ridge': False, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02\x07\x00\x00\x00\xa1\x00\x00\x03O\x00\x00\x02\x18\x00\x00\x02\x08\x00\x00\x00\xc0\x00\x00\x03N\x00\x00\x02\x17\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x02\x08\x00\x00\x00\xc0\x00\x00\x03N\x00\x00\x02\x17', '__version__': 1}</properties>
+		<properties node_id="4" format="pickle">gASVhwIAAAAAAAB9lCiMFGNvbXBhcmlzb25fY3JpdGVyaW9ulEsAjBJjb250cm9sQXJlYVZpc2li
+bGWUiIwNY3Zfc3RyYXRpZmllZJSIjAduX2ZvbGRzlEsCjAluX3JlcGVhdHOUSwOMCnJlc2FtcGxp
+bmeUSwKMBHJvcGWURz+5mZmZmZmajAtzYW1wbGVfc2l6ZZRLCYwTc2F2ZWRXaWRnZXRHZW9tZXRy
+eZRDQgHZ0MsAAwAAAAAB0QAAAJEAAATcAAAChAAAAdEAAACRAAAE3AAAAoQAAAAAAAAAAAVWAAAB
+0QAAAJEAAATcAAAChJSMEnNodWZmbGVfc3RyYXRpZmllZJSIjAh1c2Vfcm9wZZSJjAtzY29yZV90
+YWJsZZR9lIwMc2hvd25fc2NvcmVzlI+UKIwEUk1TRZSMAkNBlIwCUjKUjAJGMZSMBlJlY2FsbJSM
+A01TRZSMA01BRZSMA0FVQ5SMCVByZWNpc2lvbpSQc4wLX192ZXJzaW9uX1+USwOMEGNvbnRleHRf
+c2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZh
+bHVlc5R9lCiMD2NsYXNzX3NlbGVjdGlvbpSMFihBdmVyYWdlIG92ZXIgY2xhc3NlcymUSv////+G
+lIwMZm9sZF9mZWF0dXJllE5K/v///4aUjBVmb2xkX2ZlYXR1cmVfc2VsZWN0ZWSUiUr+////hpRo
+DX2UaBpLA3WMCmF0dHJpYnV0ZXOUjAZWb2x1bWWUSwKGlIwGV2VpZ2h0lEsChpSGlIwFbWV0YXOU
+KYwKY2xhc3NfdmFyc5SMA0NPMpRLAoaUhZR1YmF1Lg==
+</properties>
+		<properties node_id="5" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'AbsPath', 'path': 'C:/Users/hussam.hourani/Documents/OrangeDatamining/Lessons/cars prediction.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 3, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': 'C:/Users/hussam.hourani/Documents/OrangeDatamining/Lessons', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02\x1f\x00\x00\x00\xb3\x00\x00\x036\x00\x00\x02\x07\x00\x00\x02 \x00\x00\x00\xd2\x00\x00\x035\x00\x00\x02\x06\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x02 \x00\x00\x00\xd2\x00\x00\x035\x00\x00\x02\x06', '__version__': 3}</properties>
+		<properties node_id="6" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x1a\x00\x00\x00S\x00\x00\x05.\x00\x00\x02f\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x05-\x00\x00\x02e\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x05-\x00\x00\x02e', 'select_rows': True, 'selected_cols': [], 'selected_rows': [], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
+		<properties node_id="7" format="pickle">gASVDQEAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+lENCAdnQywADAAAAAAEgAAAAXQAABJAAAAJwAAABIQAAAHwAAASPAAACbwAAAAAAAAAABVYAAAEh
+AAAAfAAABI8AAAJvlIwJc2VsZWN0aW9ulF2USwBhjAtzY29yZV90YWJsZZR9lIwMc2hvd25fc2Nv
+cmVzlI+UKIwEUk1TRZSMAkNBlIwCUjKUjAJGMZSMBlJlY2FsbJSMA01TRZSMA01BRZSMA0FVQ5SM
+CVByZWNpc2lvbpSQc4wLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZR1Lg==
+</properties>
+		<properties node_id="8" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x05-\x00\x00\x02e\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x05-\x00\x00\x02e\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x05-\x00\x00\x02e', 'select_rows': True, 'selected_cols': [], 'selected_rows': [], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
+		<properties node_id="9" format="literal">{'C': 1.0, 'auto_apply': True, 'coef0': 1.0, 'controlAreaVisible': True, 'degree': 3, 'epsilon': 0.1, 'gamma': 0.0, 'kernel_type': 2, 'learner_name': '', 'limit_iter': True, 'max_iter': 100, 'nu': 0.5, 'nu_C': 1.0, 'savedWidgetGeometry': None, 'svm_type': 0, 'tol': 0.001, '__version__': 1}</properties>
+		<properties node_id="10" format="literal">{'auto_apply': True, 'binary_trees': True, 'controlAreaVisible': True, 'learner_name': '', 'limit_depth': True, 'limit_majority': True, 'limit_min_internal': True, 'limit_min_leaf': True, 'max_depth': 100, 'min_internal': 5, 'min_leaf': 2, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02\x14\x00\x00\x00\xde\x00\x00\x03B\x00\x00\x01\xfa\x00\x00\x02\x14\x00\x00\x00\xde\x00\x00\x03B\x00\x00\x01\xfa\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x02\x14\x00\x00\x00\xde\x00\x00\x03B\x00\x00\x01\xfa', 'sufficient_majority': 95, '__version__': 1}</properties>
+		<properties node_id="11" format="literal">{'auto_apply': True, 'controlAreaVisible': True, 'learner_name': 'kNN', 'metric_index': 0, 'n_neighbors': 5, 'savedWidgetGeometry': None, 'weight_index': 0, '__version__': 1}</properties>
+		<properties node_id="12" format="literal">{'auto_apply': True, 'class_weight': False, 'controlAreaVisible': True, 'index_output': 0, 'learner_name': '', 'max_depth': 3, 'max_features': 5, 'min_samples_split': 5, 'n_estimators': 10, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\xf9\x00\x00\x00\xb3\x00\x00\x03\\\x00\x00\x02\x06\x00\x00\x01\xfa\x00\x00\x00\xd2\x00\x00\x03[\x00\x00\x02\x05\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x01\xfa\x00\x00\x00\xd2\x00\x00\x03[\x00\x00\x02\x05', 'use_max_depth': False, 'use_max_features': False, 'use_min_samples_split': True, 'use_random_state': False, '__version__': 1}</properties>
+		<properties node_id="13" format="literal">{'auto_apply': True, 'controlAreaVisible': True, 'learner_name': '', 'method_index': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02#\x00\x00\x00\x8e\x00\x00\x032\x00\x00\x02,\x00\x00\x02$\x00\x00\x00\xad\x00\x00\x031\x00\x00\x02+\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x02$\x00\x00\x00\xad\x00\x00\x031\x00\x00\x02+', 'catgb_editor': {'colsample_bylevel': 1, 'lambda_index': 55, 'learning_rate': 0.3, 'max_depth': 6, 'n_estimators': 100, 'random_state': True}, 'gb_editor': {'learning_rate': 0.1, 'max_depth': 3, 'min_samples_split': 2, 'n_estimators': 100, 'random_state': True, 'subsample': 1}, 'xgb_editor': {'colsample_bylevel': 1, 'colsample_bynode': 1, 'colsample_bytree': 1, 'lambda_index': 53, 'learning_rate': 0.3, 'max_depth': 6, 'n_estimators': 100, 'random_state': True, 'subsample': 1}, 'xgbrf_editor': {'colsample_bylevel': 1, 'colsample_bynode': 1, 'colsample_bytree': 1, 'lambda_index': 53, 'learning_rate': 0.3, 'max_depth': 6, 'n_estimators': 100, 'random_state': True, 'subsample': 1}, '__version__': 1}</properties>
+		<properties node_id="14" format="literal">{'algorithm_index': 1, 'auto_apply': True, 'controlAreaVisible': True, 'learner_name': '', 'learning_rate': 1.0, 'loss_index': 0, 'n_estimators': 50, 'random_seed': 0, 'savedWidgetGeometry': None, 'use_random_seed': False, '__version__': 1}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
