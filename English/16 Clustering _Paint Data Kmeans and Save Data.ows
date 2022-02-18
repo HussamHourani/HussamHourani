@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="Paint Data" qualified_name="Orange.widgets.data.owpaintdata.OWPaintData" project_name="Orange3" version="" title="Paint Data" position="(142.0, 264.0)" />
+		<node id="1" name="k-Means" qualified_name="Orange.widgets.unsupervised.owkmeans.OWKMeans" project_name="Orange3" version="" title="k-Means" position="(379.0, 262.0)" />
+		<node id="2" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="Scatter Plot" position="(566.3333333333335, 332.66666666666674)" />
+		<node id="3" name="Save Data" qualified_name="Orange.widgets.data.owsave.OWSave" project_name="Orange3" version="" title="Save Data" position="(380.66666666666674, 410.66666666666674)" />
+		<node id="4" name="Silhouette Plot" qualified_name="Orange.widgets.visualize.owsilhouetteplot.OWSilhouettePlot" project_name="Orange3" version="" title="Silhouette Plot" position="(554.0, 174.0)" />
+		<node id="5" name="Interactive k-Means" qualified_name="orangecontrib.educational.widgets.owkmeans.OWKmeans" project_name="Orange3-Educational" version="" title="Interactive k-Means (1)" position="(380.0, 88.0)" />
+		<node id="6" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table" position="(770.0, 171.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="1" source_node_id="1" sink_node_id="2" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="2" source_node_id="0" sink_node_id="3" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="3" source_node_id="1" sink_node_id="4" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="4" source_node_id="4" sink_node_id="6" source_channel="Selected Data" sink_channel="Data" enabled="true" />
+		<link id="5" source_node_id="0" sink_node_id="5" source_channel="Data" sink_channel="Data" enabled="true" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'attr1': 'x', 'attr2': 'y', 'autocommit': True, 'brushRadius': 51, 'controlAreaVisible': True, 'data': [[0.1764373055847199, 0.7486501965043268, 0.0], [0.14165797957590867, 0.7808351544892677, 0.0], [0.18093483285006223, 0.7195348152054609, 0.0], [0.12391423752857264, 0.7056424950231966, 0.0], [0.14903683925307282, 0.7041349411396421, 0.0], [0.1582293602676409, 0.800434847193515, 0.0], [0.22542432871964818, 0.7866733737060326, 0.0], [0.19094530383523078, 0.7366936243344019, 0.0], [0.1952087229790039, 0.7704555317501571, 0.0], [0.2066681584444236, 0.8135379714548107, 0.0], [0.223305824819164, 0.8624912832513548, 0.0], [0.20361733503029622, 0.794078268677778, 0.0], [0.24238930297166297, 0.8083887523232316, 0.0], [0.2689293866977135, 0.7799074814153415, 0.0], [0.317628358034819, 0.7966881236671861, 0.0], [0.26263854963911865, 0.8062428747097932, 0.0], [0.29699581114697804, 0.7345649453901215, 0.0], [0.3224978005716115, 0.7488607751981544, 0.0], [0.3047734281609654, 0.7464421805635052, 0.0], [0.297361786249924, 0.77457336099463, 0.0], [0.35280571267079064, 0.7122171213964389, 0.0], [0.3370898706626473, 0.751411040672099, 0.0], [0.36547636654729626, 0.7299576009950884, 0.0], [0.3135704092251987, 0.6746543886055599, 0.0], [0.334941423175535, 0.7438408105430605, 0.0], [0.30550392454683467, 0.694289844709476, 0.0], [0.30471432259025055, 0.736523774879833, 0.0], [0.34210132712836294, 0.749179818015471, 0.0], [0.2536286850690748, 0.14620271822597455, 0.0], [0.21608878135964668, 0.13992173431310473, 0.0], [0.2161802305953927, 0.17270621280589032, 0.0], [0.2327963668789308, 0.16388624375080693, 0.0], [0.24755743754893117, 0.19178310211006425, 0.0], [0.20531867195995576, 0.20863346013070347, 0.0], [0.2755196912978747, 0.23681773940682752, 0.0], [0.2211818950927652, 0.25011369895209373, 0.0], [0.28863546087612574, 0.21746851132949452, 0.0], [0.3424601956731302, 0.22500146962060458, 0.0], [0.33456090915651415, 0.189881743535042, 0.0], [0.32024346822917066, 0.1943115267016626, 0.0], [0.3756447662721769, 0.1904544700642486, 0.0], [0.35810004996239453, 0.1215841103153484, 0.0], [0.37596056948035883, 0.16833213512698753, 0.0], [0.3744501585587121, 0.10971946475168506, 0.0], [0.39710608699997657, 0.13676414514497937, 0.0], [0.3621353683098411, 0.10307566553638402, 0.0], [0.4204890330506049, 0.08236604955511923, 0.0], [0.40413907118078146, 0.12638550706513163, 0.0], [0.43737574801614576, 0.09413019542116413, 0.0], [0.38384498458746785, 0.07692967973216608, 0.0], [0.8546198575043833, 0.31588405965125094, 0.0], [0.8749845964485548, 0.3222183445933965, 0.0], [0.8558117344437528, 0.3671335242484005, 0.0], [0.8013123793393843, 0.3658167723103539, 0.0], [0.893671914777479, 0.42058332577201135, 0.0], [0.853148365567749, 0.41489485939750664, 0.0], [0.8742854661532682, 0.4469395465052144, 0.0], [0.9054665518182854, 0.4289988948326894, 0.0], [0.8603182516109211, 0.5304687463817533, 0.0], [0.8889678642835848, 0.4269963713262515, 0.0], [0.846790758193994, 0.46849652877132636, 0.0], [0.9179856876125724, 0.5052489278956561, 0.0], [0.8825528889820606, 0.502300616056367, 0.0], [0.8846282968944551, 0.48006158313764347, 0.0], [0.9104275692160874, 0.5150463026077509, 0.0], [0.9444088152667885, 0.5020250236663287, 0.0], [0.9454488484210072, 0.4541016019825461, 0.0], [0.9127036086293738, 0.47870443487251807, 0.0], [0.9638274355243241, 0.45343964432863804, 0.0], [0.9385530268290749, 0.4814112030849208, 0.0], [0.9094213543510767, 0.4737159944792139, 0.0], [0.947063039829168, 0.4696844276908371, 0.0], [0.974858178735056, 0.48019681344180243, 0.0], [0.996397669699632, 0.522579620892681, 0.0], [0.9582358321722371, 0.5067445653417666, 0.0], [0.9768195099788574, 0.4647462388204992, 0.0]], 'density': 35, 'hasAttr2': True, 'labels': ['C1', 'C2'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01Q\x00\x00\x00w\x00\x00\x04;\x00\x00\x02v\x00\x00\x01Q\x00\x00\x00w\x00\x00\x04;\x00\x00\x02v\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x01Q\x00\x00\x00w\x00\x00\x04;\x00\x00\x02v', 'symbol_size': 12, 'table_name': 'Painted data', '__version__': 1}</properties>
+		<properties node_id="1" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'k': 3, 'k_from': 2, 'k_to': 8, 'max_iterations': 300, 'n_init': 10, 'normalize': True, 'optimize_k': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\xbc\x00\x00\x00\xe4\x00\x00\x02\x9c\x00\x00\x02\x1c\x00\x00\x01\xbd\x00\x00\x01\x03\x00\x00\x02\x9b\x00\x00\x02\x1b\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x01\xbd\x00\x00\x01\x03\x00\x00\x02\x9b\x00\x00\x02\x1b', 'selection': None, 'smart_init': 0, '__version__': 2}</properties>
+		<properties node_id="2" format="pickle">gASVogIAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAACXAAAAZwAABCYAAAKG
+AAAAmAAAAIYAAAQlAAAChQAAAAAAAAAABVYAAACYAAAAhgAABCUAAAKFlIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSJjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLAIwTbGFiZWxfb25seV9zZWxlY3RlZJSJjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsKjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5z
+ZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMCmF0dHJfY29sb3KUjAdDbHVz
+dGVylEtlhpSMCmF0dHJfbGFiZWyUTkr+////hpSMCmF0dHJfc2hhcGWUaCFLZYaUjAlhdHRyX3Np
+emWUTkr+////hpSMBmF0dHJfeJSMAXiUS2aGlIwGYXR0cl95lIwBeZRLZoaUaAp9lGgWSwV1jAph
+dHRyaWJ1dGVzlH2UKGgqSwJoLUsCdYwFbWV0YXOUfZQoaCFLAYwKU2lsaG91ZXR0ZZRLAnV1YmF1
+Lg==
+</properties>
+		<properties node_id="3" format="literal">{'add_type_annotations': True, 'auto_save': False, 'controlAreaVisible': True, 'filter': 'Tab-separated values (*.tab)', 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02?\x00\x00\x01\x0e\x00\x00\x035\x00\x00\x01\xab\x00\x00\x02@\x00\x00\x01-\x00\x00\x034\x00\x00\x01\xaa\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x02@\x00\x00\x01-\x00\x00\x034\x00\x00\x01\xaa', 'stored_name': 'Painted data2.tab', 'stored_path': 'C:/Users/hussam.hourani/Documents/OrangeDatamining', '__version__': 2}</properties>
+		<properties node_id="4" format="pickle">gASVqAIAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMCGJhcl9zaXpllEsEjBJjb250cm9sQXJlYVZp
+c2libGWUiIwMZGlzdGFuY2VfaWR4lEsAjBBncm91cF9ieV9jbHVzdGVylIiMEXBlbmRpbmdfc2Vs
+ZWN0aW9ulF2UKIwVbnVtcHkuY29yZS5tdWx0aWFycmF5lIwGc2NhbGFylJOUjAVudW1weZSMBWR0
+eXBllJOUjAJpNJSJiIeUUpQoSwOMATyUTk5OSv////9K/////0sAdJRiQwQ2AAAAlIaUUpRoCmgQ
+QwQ4AAAAlIaUUpRoCmgQQwQ5AAAAlIaUUpRoCmgQQwQ7AAAAlIaUUpRoCmgQQwQ9AAAAlIaUUpRo
+CmgQQwQ/AAAAlIaUUpRoCmgQQwRAAAAAlIaUUpRoCmgQQwRBAAAAlIaUUpRoCmgQQwRCAAAAlIaU
+UpRoCmgQQwREAAAAlIaUUpRoCmgQQwRIAAAAlIaUUpRoCmgQQwRKAAAAlIaUUpRljBNzYXZlZFdp
+ZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAAdAAAAKgAAAnYAAAJJAAAAHgAAAEkAAAJ1AAACSAAA
+AAAAAAAABVYAAAAeAAAASQAAAnUAAAJIlIwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGlu
+Z3OUXZSMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9
+lCiMEmFubm90YXRpb25fdmFyX2lkeJRLAEr+////hpSMD2NsdXN0ZXJfdmFyX2lkeJRLAEr+////
+hpRoOUsBdYwKYXR0cmlidXRlc5SMB0NsdXN0ZXKUSwGGlIWUjAVtZXRhc5QpjApjbGFzc192YXJz
+lCl1YmF1Lg==
+</properties>
+		<properties node_id="5" format="literal">{'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\xd7\x00\x00\x00\x81\x00\x00\x04Z\x00\x00\x02\x80\x00\x00\x01\xd7\x00\x00\x00\x81\x00\x00\x04Z\x00\x00\x02\x80\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x01\xd7\x00\x00\x00\x81\x00\x00\x04Z\x00\x00\x02\x80', '__version__': 1, 'context_settings': []}</properties>
+		<properties node_id="6" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x1a\x00\x00\x00S\x00\x00\x04;\x00\x00\x02f\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x04:\x00\x00\x02e\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x04:\x00\x00\x02e', 'select_rows': True, 'selected_cols': [], 'selected_rows': [], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
