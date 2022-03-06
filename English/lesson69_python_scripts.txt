@@ -1,0 +1,71 @@
+# 1
+import Orange
+data = Orange.data.Table("titanic")
+learner = Orange.classification.LogisticRegressionLearner()
+classifier = learner(data)
+print("Name of the Classifer:",Orange.classification.LogisticRegressionLearner())
+print(classifier(data[0], Orange.classification.Model.ValueProbs))
+
+print("Name of the variable: ", data.domain.class_var.name)
+print("Class values: ", data.domain.class_var.values)
+print("Value of our instance: ", data.domain.class_var.values[0])
+
+print(classifier(data))
+out_data = data
+
+
+
+
+
+# 2
+import Orange
+from Orange.data import *
+
+color = DiscreteVariable("color", values=["orange", "green", "yellow"])
+calories = ContinuousVariable("calories")
+fiber = ContinuousVariable("fiber")
+fruit = DiscreteVariable("fruit", values=["orange", "apple", "peach"])
+
+domain = Domain([color, calories, fiber], class_vars=fruit)
+
+data=Table.from_list(domain, [
+["green", 4, 1.2, "apple"], 
+["orange", 5, 1.1, "orange"],
+["yellow", 4, 1.0, "peach"],
+["orange", 4, 1.1, "orange"],
+["yellow", 4, 1.1,"peach"],
+["green", 5, 1.3, "apple"],
+["green", 4, 1.3, "apple"],
+["orange", 5, 1.0, "orange"],
+["yellow", 4.5, 1.3, "peach"],
+["green", 5, 1.0, "orange"]])
+
+print(data)
+
+tree_learner = Orange.classification.TreeLearner()
+tree = tree_learner(data)
+#we can predict what variety a green fruit with 3.5 calories and 2g of fiber is with the help of our model. 
+print(tree(["green", 3.5, 2]))
+print(domain.class_var.values[1])
+out_data = data
+
+
+
+#3
+#tokenized our input data by splitting them by whitespace
+print('Running Preprocessing ...')
+tokens = [doc.split(' ') for doc in in_data.documents]
+print('Tokens:', tokens)
+out_object = in_data
+out_object.store_tokens(tokens)
+
+
+
+
+#4
+#tokenized our input data by splitting them by whitespace
+print('Running Preprocessing ...')
+tokens = [doc.split(' ') for doc in in_data.documents]
+print('Tokens:', tokens)
+out_object = in_data
+out_object.store_tokens(tokens)

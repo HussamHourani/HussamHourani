@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Python Script" position="(128.61538461538464, 146.38461538461536)" />
+		<node id="1" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table" position="(339.3846153846153, 144.15384615384608)" />
+		<node id="2" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Python Script (7) (1)" position="(124.0, 42.15384615384613)" />
+		<node id="3" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table (1)" position="(331.00000000000006, 41.15384615384613)" />
+		<node id="4" name="Corpus" qualified_name="orangecontrib.text.widgets.owcorpus.OWCorpus" project_name="Orange3-Text" version="" title="Corpus (1)" position="(124.23076923076923, 271.92307692307685)" />
+		<node id="5" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Python Script (3) (1)" position="(320.2307692307692, 266.92307692307685)" />
+		<node id="6" name="Import Documents" qualified_name="orangecontrib.text.widgets.owimportdocuments.OWImportDocuments" project_name="Orange3-Text" version="" title="Import Documents (1)" position="(118.0769230769231, 418.1538461538462)" />
+		<node id="7" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Python Script (4) (1)" position="(306.07692307692315, 371.1538461538462)" />
+		<node id="8" name="Corpus Viewer" qualified_name="orangecontrib.text.widgets.owcorpusviewer.OWCorpusViewer" project_name="Orange3-Text" version="" title="Corpus Viewer (1)" position="(310.30769230769243, 469.2307692307693)" />
+		<node id="9" name="Word Cloud" qualified_name="orangecontrib.text.widgets.owwordcloud.OWWordCloud" project_name="Orange3-Text" version="" title="Word Cloud (1)" position="(499.2307692307692, 266.92307692307685)" />
+		<node id="10" name="Word Cloud" qualified_name="orangecontrib.text.widgets.owwordcloud.OWWordCloud" project_name="Orange3-Text" version="" title="Word Cloud" position="(479.07692307692315, 372.1538461538462)" />
+		<node id="11" name="File" qualified_name="Orange.widgets.data.owfile.OWFile" project_name="Orange3" version="" title="File" position="(583.0769230769233, 35.38461538461536)" />
+		<node id="12" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table (2)" position="(732.6153846153845, 35.076923076923066)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="1" source_node_id="2" sink_node_id="3" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="2" source_node_id="4" sink_node_id="5" source_channel="Corpus" sink_channel="Data" enabled="true" />
+		<link id="3" source_node_id="6" sink_node_id="7" source_channel="Corpus" sink_channel="Data" enabled="true" />
+		<link id="4" source_node_id="6" sink_node_id="8" source_channel="Corpus" sink_channel="Corpus" enabled="true" />
+		<link id="5" source_node_id="5" sink_node_id="9" source_channel="Object" sink_channel="Corpus" enabled="true" />
+		<link id="6" source_node_id="7" sink_node_id="10" source_channel="Object" sink_channel="Corpus" enabled="true" />
+		<link id="7" source_node_id="11" sink_node_id="12" source_channel="Data" sink_channel="Data" enabled="true" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xf5\x00\x00\x00X\x00\x00\x04\x83\x00\x00\x02\x88\x00\x00\x00\xf5\x00\x00\x00X\x00\x00\x04\x83\x00\x00\x02\x88\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x00\xf5\x00\x00\x00X\x00\x00\x04\x83\x00\x00\x02\x88', 'scriptLibrary': [{'name': 'defualt One', 'script': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\n\ndomain = Domain([ContinuousVariable("age"),\n                 ContinuousVariable("height"),\n                 DiscreteVariable("gender", values=("M", "F"))])\narr = np.array([\n  [25, 186, 0],\n  [30, 164, 1]])\nout_data = Table.from_numpy(domain, arr)\n', 'filename': None}], 'scriptText': 'import Orange\nfrom Orange.data import *\n\ncolor = DiscreteVariable("color", values=["orange", "green", "yellow"])\ncalories = ContinuousVariable("calories")\nfiber = ContinuousVariable("fiber")\nfruit = DiscreteVariable("fruit", values=["orange", "apple", "peach"])\n\ndomain = Domain([color, calories, fiber], class_vars=fruit)\n\ndata=Table.from_list(domain, [\n["green", 4, 1.2, "apple"], \n["orange", 5, 1.1, "orange"],\n["yellow", 4, 1.0, "peach"],\n["orange", 4, 1.1, "orange"],\n["yellow", 4, 1.1,"peach"],\n["green", 5, 1.3, "apple"],\n["green", 4, 1.3, "apple"],\n["orange", 5, 1.0, "orange"],\n["yellow", 4.5, 1.3, "peach"],\n["green", 5, 1.0, "orange"]])\n\nprint(data)\n\ntree_learner = Orange.classification.TreeLearner()\ntree = tree_learner(data)\n#we can predict what variety a green fruit with 3.5 calories and 2g of fiber is with the help of our model. \nprint(tree(["green", 3.5, 2]))\nprint(domain.class_var.values[1])\nout_data = data\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00^\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="1" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x1a\x00\x00\x00S\x00\x00\x04;\x00\x00\x02f\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x04:\x00\x00\x02e\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x04:\x00\x00\x02e', 'select_rows': True, 'selected_cols': None, 'selected_rows': None, 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
+		<properties node_id="2" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xd7\x00\x00\x00F\x00\x00\x05\x12\x00\x00\x02\x96\x00\x00\x00\xd8\x00\x00\x00e\x00\x00\x05\x11\x00\x00\x02\x95\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x00\xd8\x00\x00\x00e\x00\x00\x05\x11\x00\x00\x02\x95', 'scriptLibrary': [{'name': 'defualt One', 'script': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\n\ndomain = Domain([ContinuousVariable("age"),\n                 ContinuousVariable("height"),\n                 DiscreteVariable("gender", values=("M", "F"))])\narr = np.array([\n  [25, 186, 0],\n  [30, 164, 1]])\nout_data = Table.from_numpy(domain, arr)\n', 'filename': None}], 'scriptText': 'import Orange\ndata = Orange.data.Table("titanic")\nlearner = Orange.classification.LogisticRegressionLearner()\nclassifier = learner(data)\nprint("Name of the Classifer:",Orange.classification.LogisticRegressionLearner())\nprint(classifier(data[0], Orange.classification.Model.ValueProbs))\n\nprint("Name of the variable: ", data.domain.class_var.name)\nprint("Class values: ", data.domain.class_var.values)\nprint("Value of our instance: ", data.domain.class_var.values[0])\n\nprint(classifier(data))\nout_data = data', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00^\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="3" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x04:\x00\x00\x02e\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x04:\x00\x00\x02e\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x04:\x00\x00\x02e', 'select_rows': True, 'selected_cols': [], 'selected_rows': [], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
+		<properties node_id="4" format="pickle">gASV8wIAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfZmlsZXOUXZQojBhn
+cmltbS10YWxlcy1zZWxlY3RlZC50YWKUjE9DOi9Vc2Vycy9odXNzYW0uaG91cmFuaS9Eb2N1bWVu
+dHMvT3JhbmdlRGF0YW1pbmluZy9UZXh0IERhdGFzZXRzL0pGS19zcGVlY2guY3N2lIwMYW5kZXJz
+ZW4udGFilIwRYm9vay1leGNlcnB0cy50YWKUjBhlbGVjdGlvbi10d2VldHMtMjAxNi50YWKUjBdm
+cmllbmRzLXRyYW5zY3JpcHRzLnRhYpRljBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAA
+AAKYAAAA7AAABEkAAAIXAAACmAAAAOwAAARJAAACFwAAAAAAAAAABVYAAAKYAAAA7AAABEkAAAIX
+lIwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0
+dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojA50aXRsZV92YXJpYWJsZZSMCEFi
+c3RyYWN0lEtnhpSMCnVzZWRfYXR0cnOUXZRoF0tnhpRhSv3///+GlGgMSwF1jAphdHRyaWJ1dGVz
+lH2UjAlBVFUgVG9waWOUSwFzjAVtZXRhc5R9lCiMBVRpdGxllEsDjAhBYnN0cmFjdJRLA4wHQ29u
+dGVudJRLA4wNQVRVIE51bWVyaWNhbJRLA4wIQVRVIFR5cGWUSwF1dWJoESmBlH2UKGgUfZQoaBaM
+C3NwZWVjaF9kYXRllEtnhpRoGV2UjA1hcnRpY2xlX3RpdGxllEtnhpRhSv3///+GlGgMSwF1aB19
+lCiMCnNjcmFwX2RhdGWUSwSMDHNwZWVjaF90aXRsZZRLAXVoIH2UKGgtSwOMDGFydGljbGVfbGlu
+a5RLA2gqSwOMBnNwZWVjaJRLA3V1YmV1Lg==
+</properties>
+		<properties node_id="5" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x92\x00\x00\x00U\x00\x00\x04\xb1\x00\x00\x02\x85\x00\x00\x01\x92\x00\x00\x00U\x00\x00\x04\xb1\x00\x00\x02\x85\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x01\x92\x00\x00\x00U\x00\x00\x04\xb1\x00\x00\x02\x85', 'scriptLibrary': [{'name': 'defualt One', 'script': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\n\ndomain = Domain([ContinuousVariable("age"),\n                 ContinuousVariable("height"),\n                 DiscreteVariable("gender", values=("M", "F"))])\narr = np.array([\n  [25, 186, 0],\n  [30, 164, 1]])\nout_data = Table.from_numpy(domain, arr)\n', 'filename': None}], 'scriptText': "#tokenized our input data by splitting them by whitespace\nprint('Running Preprocessing ...')\ntokens = [doc.split(' ') for doc in in_data.documents]\nprint('Tokens:', tokens)\nout_object = in_data\nout_object.store_tokens(tokens)", 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00^\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="6" format="pickle">gASV3AIAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAtjdXJyZW50UGF0aJSMc0M6L1Vz
+ZXJzL2h1c3NhbS5ob3VyYW5pL0RvY3VtZW50cy9PcmFuZ2VEYXRhbWluaW5nL0FyYWJpYyBEYXRh
+c2V0cy9BbmltYWxzICYgVHJhZGl0aW9uYWxzL9mC2LXYtSDYp9mE2K3ZitmI2KfZhtin2KqUjAhs
+ZW1tYV9jYpSIjAZuZXJfY2KUiYwGcG9zX2NilImMDHJlY2VudF9wYXRoc5RdlCiMHm9yYW5nZXdp
+ZGdldC51dGlscy5maWxlZGlhbG9nc5SMClJlY2VudFBhdGiUk5QpgZR9lCiMB2Fic3BhdGiUaAOM
+BnByZWZpeJROjAdyZWxwYXRolE6MBXRpdGxllIwAlIwFc2hlZXSUaBKMC2ZpbGVfZm9ybWF0lE51
+YmgLKYGUfZQoaA6Mb0M6L1VzZXJzL2h1c3NhbS5ob3VyYW5pL0RvY3VtZW50cy9PcmFuZ2VEYXRh
+bWluaW5nL0FyYWJpYyBEYXRhc2V0cy9BbmltYWxzICYgVHJhZGl0aW9uYWxzL9mC2LXYtSDYqtmC
+2YTZitiv2YrYqZRoD05oEE5oEWgSaBNoEmgUTnViaAspgZR9lChoDoxYQzovVXNlcnMvaHVzc2Ft
+LmhvdXJhbmkvRG9jdW1lbnRzL09yYW5nZURhdGFtaW5pbmcvVGV4dCBEYXRhc2V0cy9LZW5uZWR5
+X1NwZWVjaGVzLW1hc3RlcpRoD05oEE5oEWgSaBNoEmgUTnViZYwLcmVjZW50X3VybHOUXZSME3Nh
+dmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAeoAAADfAAADawAAAdsAAAHrAAAA/gAAA2oA
+AAHaAAAAAAAAAAAFVgAAAesAAAD+AAADagAAAdqUjAZzb3VyY2WUSwCMC19fdmVyc2lvbl9flEsB
+dS4=
+</properties>
+		<properties node_id="7" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x92\x00\x00\x00U\x00\x00\x04\xb1\x00\x00\x02\x85\x00\x00\x01\x92\x00\x00\x00U\x00\x00\x04\xb1\x00\x00\x02\x85\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x01\x92\x00\x00\x00U\x00\x00\x04\xb1\x00\x00\x02\x85', 'scriptLibrary': [{'name': 'defualt One', 'script': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\n\ndomain = Domain([ContinuousVariable("age"),\n                 ContinuousVariable("height"),\n                 DiscreteVariable("gender", values=("M", "F"))])\narr = np.array([\n  [25, 186, 0],\n  [30, 164, 1]])\nout_data = Table.from_numpy(domain, arr)\n', 'filename': None}], 'scriptText': "#tokenized our input data by splitting them by whitespace\nprint('Running Preprocessing ...')\ntokens = [doc.split(' ') for doc in in_data.documents]\nprint('Tokens:', tokens)\nout_object = in_data\nout_object.store_tokens(tokens)", 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00^\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="8" format="pickle">gASVCwIAAAAAAAB9lCiMCmF1dG9jb21taXSUiIwSY29udHJvbEFyZWFWaXNpYmxllIiME3NhdmVk
+V2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAToAAABTAAAFDQAAAmYAAAE7AAAAcgAABQwAAAJl
+AAAAAAAAAAAFVgAAATsAAAByAAAFDAAAAmWUjAtzaG93X3Rva2Vuc5SJjAtfX3ZlcnNpb25fX5RL
+AYwQY29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJST
+lCmBlH2UKIwGdmFsdWVzlH2UKIwQZGlzcGxheV9mZWF0dXJlc5RdlCiMBG5hbWWUS2eGlIwEcGF0
+aJRLZ4aUjAdjb250ZW50lEtnhpRlSv3///+GlIwPZGlzcGxheV9pbmRpY2VzlF2UKEsASwFLAmWM
+DXJlZ2V4cF9maWx0ZXKUjACUSv////+GlIwOc2VhcmNoX2luZGljZXOUXZQoSwBLAUsCZYwSc2Vs
+ZWN0ZWRfZG9jdW1lbnRzlI+UKIwV2KfZhNix2YbYqCDYp9mE2LDZg9mKlJBK/v///4aUaAZLAXWM
+CmF0dHJpYnV0ZXOUKYwFbWV0YXOUjARuYW1llEsDhpSMBHBhdGiUSwOGlIwHY29udGVudJRLA4aU
+h5SMCmNsYXNzX3ZhcnOUKXViYXUu
+</properties>
+		<properties node_id="9" format="pickle">gASVtwAAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+lENCAdnQywADAAAAAAFiAAAAUwAABOcAAAJmAAABYwAAAHIAAATmAAACZQAAAAAAAAAABVYAAAFj
+AAAAcgAABOYAAAJllIwOc2VsZWN0ZWRfd29yZHOUj5SMC3dvcmRzX2NvbG9ylIiMCndvcmRzX3Rp
+bHSUSwGMC19fdmVyc2lvbl9flEsBdS4=
+</properties>
+		<properties node_id="10" format="pickle">gASVtwAAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+lENCAdnQywADAAAAAAFiAAAAUwAABOcAAAJmAAABYwAAAHIAAATmAAACZQAAAAAAAAAABVYAAAFj
+AAAAcgAABOYAAAJllIwOc2VsZWN0ZWRfd29yZHOUj5SMC3dvcmRzX2NvbG9ylIiMCndvcmRzX3Rp
+bHSUSwGMC19fdmVyc2lvbl9flEsBdS4=
+</properties>
+		<properties node_id="11" format="pickle">gASVBQYAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZQojB5v
+cmFuZ2V3aWRnZXQudXRpbHMuZmlsZWRpYWxvZ3OUjApSZWNlbnRQYXRolJOUKYGUfZQojAdhYnNw
+YXRolIw6QzovT3JhbmdlMzMxL0xpYi9zaXRlLXBhY2thZ2VzL09yYW5nZS9kYXRhc2V0cy90aXRh
+bmljLnRhYpSMBnByZWZpeJSMD3NhbXBsZS1kYXRhc2V0c5SMB3JlbHBhdGiUjAt0aXRhbmljLnRh
+YpSMBXRpdGxllIwAlIwFc2hlZXSUaBCMC2ZpbGVfZm9ybWF0lE51YmgGKYGUfZQoaAmMN0M6L09y
+YW5nZTMzMS9MaWIvc2l0ZS1wYWNrYWdlcy9PcmFuZ2UvZGF0YXNldHMvaXJpcy50YWKUaAtoDGgN
+jAhpcmlzLnRhYpRoD2gQaBFoEGgSTnViaAYpgZR9lChoCYxqQzovVXNlcnMvaHVzc2FtLmhvdXJh
+bmkvQXBwRGF0YS9Mb2NhbC9Qcm9ncmFtcy9PcmFuZ2UvTGliL3NpdGUtcGFja2FnZXMvT3Jhbmdl
+L2RhdGFzZXRzL2lyaXMgLSBwcmVkaWN0LnRhYpRoC4wPc2FtcGxlLWRhdGFzZXRzlGgNjBJpcmlz
+IC0gcHJlZGljdC50YWKUaA9oEGgRaBBoEk51YmWMC3JlY2VudF91cmxzlF2UjBNzYXZlZFdpZGdl
+dEdlb21ldHJ5lENCAdnQywADAAAAAAGhAAAAZgAAA7UAAAKQAAABogAAAIUAAAO0AAACjwAAAAAA
+AAAABVYAAAGiAAAAhQAAA7QAAAKPlIwLc2hlZXRfbmFtZXOUfZSMBnNvdXJjZZRLAIwDdXJslGgQ
+jA1kb21haW5fZWRpdG9ylH2UjAtfX3ZlcnNpb25fX5RLAYwQY29udGV4dF9zZXR0aW5nc5RdlCiM
+FW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMCXZh
+cmlhYmxlc5RdlGgkfZRoMF2UKF2UKIwGc3RhdHVzlIwUT3JhbmdlLmRhdGEudmFyaWFibGWUjBBE
+aXNjcmV0ZVZhcmlhYmxllJOUSwCMGmNyZXcsIGZpcnN0LCBzZWNvbmQsIHRoaXJklIllXZQojANh
+Z2WUaDhLAIwMYWR1bHQsIGNoaWxklIllXZQojANzZXiUaDhLAIwMZmVtYWxlLCBtYWxllIllXZQo
+jAhzdXJ2aXZlZJRoOEsBjAdubywgeWVzlIllZXNoJksBdYwKYXR0cmlidXRlc5RoNV2UKIwEY3Jl
+d5SMBWZpcnN0lIwGc2Vjb25klIwFdGhpcmSUZYaUaDtdlCiMBWFkdWx0lIwFY2hpbGSUZYaUaD5d
+lCiMBmZlbWFsZZSMBG1hbGWUZYaUh5SMBW1ldGFzlCmMCmNsYXNzX3ZhcnOUaEFdlCiMAm5vlIwD
+eWVzlGWGlIWUjBJtb2RpZmllZF92YXJpYWJsZXOUXZR1YmgrKYGUfZQoaC59lChoMF2UaCR9lGgw
+XZQoXZQojAxzZXBhbCBsZW5ndGiUaDaMEkNvbnRpbnVvdXNWYXJpYWJsZZSTlEsAaBCIZV2UKIwL
+c2VwYWwgd2lkdGiUaGVLAGgQiGVdlCiMDHBldGFsIGxlbmd0aJRoZUsAaBCIZV2UKIwLcGV0YWwg
+d2lkdGiUaGVLAGgQiGVdlCiMBGlyaXOUaDhLAYwsSXJpcy1zZXRvc2EsIElyaXMtdmVyc2ljb2xv
+ciwgSXJpcy12aXJnaW5pY2GUiWVlc2gmSwF1aEMojAxzZXBhbCBsZW5ndGiUSwKGlIwLc2VwYWwg
+d2lkdGiUSwKGlIwMcGV0YWwgbGVuZ3RolEsChpSMC3BldGFsIHdpZHRolEsChpR0lGhTKWhUjARp
+cmlzlF2UKIwLSXJpcy1zZXRvc2GUjA9JcmlzLXZlcnNpY29sb3KUjA5JcmlzLXZpcmdpbmljYZRl
+hpSFlGhaXZR1YmV1Lg==
+</properties>
+		<properties node_id="12" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x1a\x00\x00\x00S\x00\x00\x04;\x00\x00\x02f\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x04:\x00\x00\x02e\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x01\x1b\x00\x00\x00r\x00\x00\x04:\x00\x00\x02e', 'select_rows': True, 'selected_cols': [], 'selected_rows': [], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>

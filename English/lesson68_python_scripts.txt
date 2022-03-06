@@ -1,0 +1,44 @@
+import numpy as np
+from Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable
+
+domain = Domain([ContinuousVariable("age"),
+                 ContinuousVariable("height"),
+                 DiscreteVariable("gender", values=("M", "F"))])
+arr = np.array([
+  [25, 186, 0],
+  [30, 164, 1]])
+out_data = Table.from_numpy(domain, arr)
+
+
+
+
+
+
+print(in_data)
+print("Attributes : ")
+print(in_data.domain)
+print("Number of rows : ")
+print(len(in_data))
+out_data = in_data.copy()
+
+
+
+import random
+from Orange.data import Domain, Table
+new_data = in_data.copy()
+#introduces some Gaussian noise to the data
+for inst in new_data:
+  for f in inst.domain.attributes:
+    inst[f] += random.gauss(0, 0.02)
+out_data = new_data
+
+
+
+
+
+
+import numpy as np
+from Orange.data import Table
+
+new_X = np.log(in_data.X)
+out_data = Table(in_data.domain, new_X, in_data.Y, in_data.metas)
