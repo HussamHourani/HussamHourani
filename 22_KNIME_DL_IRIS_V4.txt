@@ -1,0 +1,12 @@
+$class$ = "Iris-setosa" => 0
+$class$ = "Iris-versicolor" => 1
+$class$ = "Iris-virginica" => 2
+
+class_collection
+
+Output_1/Softmax:0_
+
+$Output_1/Softmax:0_0$ > $Output_1/Softmax:0_1$ AND $Output_1/Softmax:0_0$ > $Output_1/Softmax:0_2$ => 0
+$Output_1/Softmax:0_1$ > $Output_1/Softmax:0_0$ AND $Output_1/Softmax:0_1$ >$Output_1/Softmax:0_2$ => 1
+$Output_1/Softmax:0_2$ > $Output_1/Softmax:0_0$ AND $Output_1/Softmax:0_2$ >$Output_1/Softmax:0_1$ => 2
+TRUE => 3
